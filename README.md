@@ -28,7 +28,7 @@ There are 4 parts for this workflow.
 2. The outcome of this script will generate a list of genomic bin pairs, which represent two far apart genomic locations that have reads mapped simultaneously on them. It follows by the number of cross-junction reads in each examine sample.   
 2. To avoid false positive, we need to remove the noises by setting two thresholds. 
 3. First threshold: The novel junctions are unique to specific sample, so other peer samples and controls should have 0 cross-junction reads. 
-4. Second threshold: The sample containing cross-junction reads should have enough coverage to demonstrate it may be a real junction. Please look at adjacent-bin-threshold.md for detailed information.
+4. Second threshold: The sample containing cross-junction reads should have enough coverage to demonstrate it may be a real junction. Please look at intro-adjacent-bin-threshold.md for detailed information.
 6. To sum up, only when one sample have cross-junction reads over the baseline for this sample, meanwhile other peer samples and controls have 0 cross-junction reads, this genomic region pairs will become a potential novel junction location. 
 7. Since every sample has its own pseudo-junction coverage, the program did threshold selection one by one. Finally, every examine sample will have its unique list of potential novel junction location. 
 
