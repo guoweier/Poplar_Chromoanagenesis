@@ -2,11 +2,11 @@
 A workflow for locating the genomic position of chromosomal rearrangement junctions by using Illumina genome sequencing. 
 
 ## Introduction
-Genomic structural variation is widely reported in different species. Extreme scenario such as chromoanagenesis, which is the fragmentation and reorganization of one chromosome in early mitosis, has been detected under various situation. It has shown to correlate with human cancer, but also have been found in plants. 
-Identifying the novel DNA junctions would be really essential to study genome restructuring, because it provides the foundamental information for studying:
-a. How many chromosomes involved;
-b. How does it affect genomic features, such as genes, TEs, etc. 
-c. Discover other features such as chromosome inversion, translocation. 
+Genomic structural variation is widely reported in different species. Extreme scenario such as chromoanagenesis, which is the fragmentation and reorganization of one chromosome in early mitosis, has been detected under various situation. It has shown to correlate with human cancer, but also have been found in plants. <br>
+Identifying the novel DNA junctions would be really essential to study genome restructuring, because it provides the foundamental information for studying: 
+1. How many chromosomes involved;
+2. How does it affect genomic features, such as genes, TEs, etc. 
+3. Discover other features such as chromosome inversion, translocation. 
 
 By using the Illumina short-read sequencing data, this workflow is able to locate the novel DNA junctions during genome restructuring. 
 It is able to find out: 
