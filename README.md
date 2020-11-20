@@ -32,4 +32,5 @@ There are 4 parts for this workflow.
 6. To sum up, only when one sample have cross-junction reads over the baseline for this sample, meanwhile other peer samples and controls have 0 cross-junction reads, this genomic region pairs will become a potential novel junction location. 
 7. Since every sample has its own pseudo-junction coverage, the program did threshold selection one by one. Finally, every examine sample will have its unique list of potential novel junction location. 
 
-#### Part 3. 
+#### Part 3. Compare dosage variation boundaries with cross-junction reads regions. (optional)
+1. 
