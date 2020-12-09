@@ -1,5 +1,5 @@
 # Poplar Chromoanagenesis
-A workflow for locating the genomic position of chromosomal rearrangement junctions by using Illumina genome sequencing. 
+A pipeline for locating the genomic position of chromosomal rearrangement junctions by using Illumina genome sequencing. 
 
 ### Introduction
 Genomic structural variation is widely reported in different species. Extreme scenario such as chromoanagenesis, which is the fragmentation and reorganization of one chromosome in early mitosis, has been detected under various situation. It has shown to correlate with human cancer, but also have been found in plants. <br>
@@ -16,7 +16,7 @@ It is able to find out:
 3. The overlaps or unknown insertions between two joined fragment ends. 
 
 ### Working Process
-There are 4 parts for this workflow. 
+There are 4 parts for this pipeline. 
 
 #### Part 1. Record dosage Variation boundaries.
 1. Input file is the outcome of Bin-By-Sam.py from Comai Lab (https://github.com/Comai-Lab/bin-by-sam). Check the link for more inforamtion. 
@@ -33,4 +33,11 @@ There are 4 parts for this workflow.
 7. Since every sample has its own pseudo-junction coverage, the program did threshold selection one by one. Finally, every examine sample will have its unique list of potential novel junction location. 
 
 #### Part 3. Compare dosage variation boundaries with cross-junction reads regions. (optional)
-1. 
+1. This step is to typically compare regions containing cross-junction reads with dosage boundaries. If only interested in the question like 'where do CNVs insert in the genome', this step is helpful. 
+
+#### Part 4. PRICE assembly and BLAST
+1. PRICE assembly can assemble cross-junction reads into one contig. Look at http://derisilab.ucsf.edu/software/price/ for more information. 
+2. For running PRICE assembly, every potential junction needs seed, which is a fasta file containing its cross-junction reads. A custom python script was designed for extracting cross-junction reads (https://github.com/guoweier/Poplar_Chromoanagenesis/blob/master/pairend-seeds-general.py). Briefly, it takes a list of potential junction regions, and searched in .sam files to extract typical reads. <br>
+The input list example:
+Ref1	Bin1-Start	Ref2	Bin2-Start	POP25_72	POP26_09	POP26_54	POP27_32	POP27_77	POP27_88	POP28_09	POP28_86	POP30_88	POP31_79	POP33_31	female	male
+Chr01	1274500	Chr16	3732500	11	0	0	0	0	0	0	0	0	0	0	0	0
