@@ -19,7 +19,7 @@ It is able to find out:
 There are 4 parts for this pipeline. 
 
 #### Part 1. Record dosage Variation boundaries.
-1. Input file is the outcome of [Bin-By-Sam.py](https://github.com/Comai-Lab/bin-by-sam) from Comai Lab (https://github.com/Comai-Lab/bin-by-sam). Check the link for more inforamtion. 
+1. Input file is the outcome of [Bin-By-Sam.py](https://github.com/Comai-Lab/bin-by-sam) from Comai Lab. Check the link for more inforamtion. 
 2. Make scatter plots with the input data. The plot is going to show relative read coverage of consecutive set-size bins along the whole genome. 
 3. Manually select boundary bins of copy number variation.
 
@@ -39,5 +39,5 @@ There are 4 parts for this pipeline.
 1. PRICE assembly can assemble cross-junction reads into one contig. Look at [PRICE](http://derisilab.ucsf.edu/software/price/) for more information. 
 2. For running PRICE assembly, every potential junction needs seed, which is a fasta file containing its cross-junction reads. A custom [python script](https://github.com/guoweier/Poplar_Chromoanagenesis/blob/master/pairend-seeds-general.py) was designed for extracting cross-junction reads. Briefly, it takes a list of potential junction regions, and searched in .sam files to extract typical reads. <br>
 The input list example:
-```Ref1	Bin1-Start	Ref2	Bin2-Start	POP25_72	POP26_09	POP26_54	POP27_32	POP27_77	POP27_88	POP28_09	POP28_86	POP30_88	POP31_79	POP33_31	female	male<br>
-Chr01	1274500	Chr16	3732500	11	0	0	0	0	0	0	0	0	0	0	0	0```
+```Ref1	Bin1-Start	Ref2	Bin2-Start	Sample1	Sample2	Sample3	Sample4	Sample5	Sample6	Sample7	Sample8	Sample9	Sample10	Sample11	Control1	Control2```
+```Chr01	1274500	Chr16	3732500	11	0	0	0	0	0	0	0	0	0	0	0	0```
