@@ -38,5 +38,5 @@ There are 4 parts for this pipeline.
 #### Part 4. PRICE assembly and BLAST
 1. PRICE assembly can assemble cross-junction reads into one contig. Look at [PRICE](http://derisilab.ucsf.edu/software/price/) for more information. 
 2. For running PRICE assembly, every potential junction needs seed, which is a fasta file containing its cross-junction reads. A custom [python script](https://github.com/guoweier/Poplar_Chromoanagenesis/blob/master/pairend-seeds-general.py) was designed for extracting cross-junction reads. Briefly, it takes a list of potential junction regions, and searched in .sam files to extract typical reads. <br>
-The input list example:<br>
-```Chr01	1274500	Chr16	3732500	11	0	0	0	0	0	0	0	0	0	0	0	0```<br>
+The input list example:
+<br>```Chr01	1274500	Chr16	3732500	11	0	0	0	0	0	0	0	0	0	0	0	0```<br>
