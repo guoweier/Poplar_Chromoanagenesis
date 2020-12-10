@@ -57,5 +57,12 @@ There are 4 parts for this pipeline.
    - -mpi a: (a)minimum % identity for contig-edge assembly
    -o a: (a)output file name (.fasta)
    - The outcome of PRICE script: For every potential junction, there is a fasta file containing its integrated contigs. <br>
-4. After PRICE assembly, we blast contigs onto the reference genome. A custom bash script was designed for running BLAST nucleotides for multiple tasks at once. <br>
+4. After PRICE assembly, we blast contigs onto the reference genome. A custom [bash script](https://github.com/guoweier/Poplar_Chromoanagenesis/blob/master/BlastN-multiquery.sh) was designed for running BLAST nucleotides for multiple tasks at once. <br>
+   - The fundamental blastN command example:<br>
+      ```
+      blastn -db /cato2pool/weier-poplar/raw/ref/Ptrichocarpa_v3.0_210.fa -query ${fasta}.cycle10.fasta -out ${fasta}.out
+      ```
+   - -db: database
+   - -query: input contig files
+   - -out: output file
 
