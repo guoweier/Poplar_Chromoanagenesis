@@ -51,4 +51,8 @@ There are 4 parts for this pipeline.
     ```
    - -spfp a b c d: unpaired reads are split into paired ends, with the scores of double-use nuceotides halved. (a)input file, (b)the length of the 'reads' that will be taken from each side of the input reads, (c)amplicon insert size (including read), (d)required % identity for match (25-100 allowed)
    - -icf a b c: input seed file. (a)initial contig file, (b)number of addition steps, (c)number of cycles per step, (d)const by which to multiply quality scores
-   - -nc: 
+   - -nc a: (a)num. of cycles
+   - -mol a: (a)minimum overlap length for mini-assembly
+   - -tol a: (a)threshold seq num for scaling overlap for contig-edge assemblies
+   - -mpi a: (a)minimum % identity for contig-edge assembly
+   -o a: (a)output file name (.fasta)
