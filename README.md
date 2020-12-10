@@ -44,7 +44,7 @@ There are 4 parts for this pipeline.
     Chr01	1274500	Chr16	3732500	11	0	0	0	0	0	0	0	0	0	0	0	0
     ```
    - The input list starts with the two crossed regions, then followed by cross-junction reads number for each sample of this specific region. <br>
-3. A custom bash script was designed to run PRICE assembly for multiple tasks at once. <br>
+3. A custom [bash script](https://github.com/guoweier/Poplar_Chromoanagenesis/blob/master/Price-assembly-loop.sh) was designed to run PRICE assembly for multiple tasks at once. <br>
    - The fundamental PRICE command example:<br>
     ```
     PriceTI -spfp ${seed}.fasta 50 150 95 -icf ${seed}.fasta 1 1 1 -nc 10 -mol 20 -tol 10 -mpi 80 -o ${seed}.fasta
