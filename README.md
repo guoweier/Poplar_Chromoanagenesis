@@ -46,4 +46,9 @@ There are 4 parts for this pipeline.
    - The input list starts with the two crossed regions, then followed by cross-junction reads number for each sample of this specific region. <br>
 3. A custom bash script was designed to run PRICE assembly for multiple tasks at once. <br>
    - The fundamental PRICE command example:<br>
-  
+    ```
+    PriceTI -spfp ${seed}.fasta 50 150 95 -icf ${seed}.fasta 1 1 1 -nc 10 -mol 20 -tol 10 -mpi 80 -o ${seed}.fasta
+    ```
+   - -spfp a b c d: unpaired reads are split into paired ends, with the scores of double-use nuceotides halved. (a)input file, (b)the length of the 'reads' that will be taken from each side of the input reads, (c)amplicon insert size (including read), (d)required % identity for match (25-100 allowed)
+   - -icf a b c: input seed file. (a)initial contig file, (b)number of addition steps, (c)number of cycles per step, (d)const by which to multiply quality scores
+   - -nc: 
