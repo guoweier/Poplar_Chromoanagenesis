@@ -65,4 +65,11 @@ There are 4 parts for this pipeline.
    - -db: database
    - -query: input contig files
    - -out: output file
+   - The criteria for selecting valid junctions:<br>
+      a. The contig mapped onto predicted regions on the reference genome
+      b. The contig did not map to other genomic positions multiple times (>=4)
+
+### Results
+This pipeline predicts the genomic positions of novel DNA junctions by using Illumina short-read sequencing. It finally gives out potential junction sequence, the two genomic mapping positions, as well as other information such as junction orientation. <br>
+With these results, we can predict how genome being rearranged during early development. Structural variation such as transloction, inversion, or even extreme scenario such as chromoanagenesis can be characterized with this approach. <br>
 
