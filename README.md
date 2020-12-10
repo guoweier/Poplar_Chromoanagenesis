@@ -43,7 +43,6 @@ There are 4 parts for this pipeline.
   Ref1	Bin1-Start	Ref2	Bin2-Start	POP25_72	POP26_09	POP26_54	POP27_32	POP27_77	POP27_88	POP28_09	POP28_86	POP30_88	POP31_79	POP33_31	female	male
   Chr01	1274500	Chr16	3732500	11	0	0	0	0	0	0	0	0	0	0	0	0
   ```
-  
   The input list starts with the two crossed regions, then followed by cross-junction reads number for each sample of this specific region. <br>
 3. A custom bash script was designed to run PRICE assembly for multiple tasks at once. <br>
   The fundamental PRICE command example:<br>
