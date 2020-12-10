@@ -56,3 +56,6 @@ There are 4 parts for this pipeline.
    - -tol a: (a)threshold seq num for scaling overlap for contig-edge assemblies
    - -mpi a: (a)minimum % identity for contig-edge assembly
    -o a: (a)output file name (.fasta)
+   - The outcome of PRICE script: For every potential junction, there is a fasta file containing its integrated contigs. <br>
+4. After PRICE assembly, we blast contigs onto the reference genome. A custom bash script was designed for running BLAST nucleotides for multiple tasks at once. <br>
+
