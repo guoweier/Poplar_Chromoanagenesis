@@ -1,6 +1,6 @@
 # Enrichment Ratio
 ### Introduction
-This is a [pipeline]() for calculating the genomic feature density around each of the novel breakpoint, then run a one-sample t-test to check the significance between real breakpoints and pseudo-junction loci. 
+This is a [pipeline](https://github.com/guoweier/Poplar_Chromoanagenesis/blob/master/enrichment-ratio/enrichment-window-ratio.py) for calculating the genomic feature density around each of the novel breakpoint, then run a one-sample t-test to check the significance between real breakpoints and pseudo-junction loci. 
 ### Working Process
 #### Calculate density
 1. Set a window on the genome with the breakpoint at the center. Here we run two different window sizes: 10kb and 100kb. 
