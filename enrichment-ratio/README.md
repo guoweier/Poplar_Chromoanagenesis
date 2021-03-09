@@ -15,3 +15,6 @@ This is a [pipeline](https://github.com/guoweier/Poplar_Chromoanagenesis/blob/ma
 1. Enrichment ratios were calculated by taking the means of genomic feature density at real breakpoints, divided by the means of the corresponded features density at random pseudo breakpoints datasets.
 2. Run [one-sample t-test](https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.ttest_1samp.html) with sample group and population group. 
 ### Output File
+The script has two output .txt files. 
+1. The file with feature density for each novel breakpoint.
+2. The file with 1,000 random datasets, followed with the mean of 1,000 pseudo-breakpoint density and p-value after t-test. 
