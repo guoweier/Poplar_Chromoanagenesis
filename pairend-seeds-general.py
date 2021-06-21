@@ -22,8 +22,9 @@ import itertools
 
 usage = ""
 parser = OptionParser(usage=usage)
-parser.add_option("-f", "--input_file", dest="f", help="Text file for selecting chimeric reads.")
+parser.add_option("-f", "--input_file", dest="f", help="Txt file for selecting chimeric reads.")
 #parser.add_option("-n", "--name", dest="name", help="File with list of sample names")
+parser.add_option("-b", "--bin_size", dest="b", type = "int", default=500, help="Bin size used for chimeric reads search (500)")
 parser.add_option("-m", "--mapqual", dest="mapqual", type = "int", default=10, help="Minimum mappign quality (10)")
 parser.add_option("-i", "--insert", dest="insert", type = "int", default=2000, help="maximum estimated insert between forward and reverse (2000)")
 parser.add_option("-c", "--mincov", dest="mincov", type = "int", default=0, help="Minimum coverage for a bin to be in the output, across all libraries")
@@ -33,6 +34,7 @@ parser.add_option("-c", "--mincov", dest="mincov", type = "int", default=0, help
 
 
 txtfile = opt.f
+binsize = opt.b
 mindiff = opt.insert
 minmap = opt.mapqual
 (opt, args) = parser.parse_args()
@@ -128,16 +130,16 @@ for line in txt:
                 continue
             if chr1 == chr2:
                 if each[0][1] == each[1][1] == chr1:
-                    if (each[0][2] > pos1 and each[0][2] < (pos1 + 500)) and ((each[1][2] > pos2) and (each[1][2]) < (pos2 + 500)):
+                    if (each[0][2] > pos1 and each[0][2] < (pos1 + binsize)) and ((each[1][2] > pos2) and (each[1][2]) < (pos2 + binsize)):
                         combos.append(each)
-                    if (each[1][2] > pos1 and each[1][2] < (pos1 + 500)) and ((each[0][2] > pos2) and (each[0][2]) < (pos2 + 500)):
+                    if (each[1][2] > pos1 and each[1][2] < (pos1 + binsize)) and ((each[0][2] > pos2) and (each[0][2]) < (pos2 + binsize)):
                         combos.append(each)
             elif chr1 != chr2:
                 if each[0][1] == chr1 and each[1][1] == chr2:
-                    if (each[0][2] > pos1 and each[0][2] < (pos1 + 500)) and ((each[1][2] > pos2) and (each[1][2]) < (pos2 + 500)):
+                    if (each[0][2] > pos1 and each[0][2] < (pos1 + binsize)) and ((each[1][2] > pos2) and (each[1][2]) < (pos2 + binsize)):
                         combos.append(each)
                 if each[1][1] == chr1 and each[0][1] == chr2:
-                    if (each[1][2] > pos1 and each[1][2] < (pos1 + 500)) and ((each[0][2] > pos2) and (each[0][2]) < (pos2 + 500)):
+                    if (each[1][2] > pos1 and each[1][2] < (pos1 + binsize)) and ((each[0][2] > pos2) and (each[0][2]) < (pos2 + binsize)):
                         combos.append(each)
             else: 
                 continue
