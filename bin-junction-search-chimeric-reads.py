@@ -5,6 +5,13 @@ from optparse import OptionParser
 from collections import defaultdict
 import itertools
 
+# This script searches for sequencing reads that two ends mapped far apart on the genome. 
+# Input: sam files. 
+# Output: A list of paired-regions where the chimeric reads mapped, then followed with the number of chimeric reads in each sample. 
+# Output format: 
+# Ref1 Bin-Start1 Ref2 Bin-Start2 Sample1 Sample2 Sample3 ... Samplen
+
+
 usage = ""
 parser = OptionParser(usage=usage)
 #parser.add_option("-f", "--file", dest="f", help="Input .sam file.")
