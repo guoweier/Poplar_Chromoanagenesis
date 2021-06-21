@@ -12,7 +12,7 @@ import itertools
 #For seeds, these reads are exactly cross the junctions, so two ends of these reads are far apart. So they are actually the chimeric reads counted before. 
 
 #Input file: 
-#Potential junctions in chimeric reads format with title line. i.e. Ref1 Ref1-BinStart Ref2 Ref2-BinStart CK sample1 sample2 ... samplen 
+#Potential junctions in chimeric reads format with title line. i.e. Ref1 Ref1-BinStart Ref2 Ref2-BinStart sample1 sample2 ... samplen 
 #Each element is separated by tab. The file is txt. 
 
 #Output file:
