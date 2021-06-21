@@ -24,7 +24,7 @@ There are 4 parts for this pipeline.
 3. Manually select boundary bins of copy number variation.
 
 #### Part 2. Extract cross-junction reads. 
-1. To find out whether there are novel junctions, the program look for regions where have sequencing reads that mapped at least 2,000 bp apart on the genome. 
+1. To find out whether there are novel junctions, the program look for regions where have sequencing reads that mapped at least 2,000 bp apart on the genome. A custom [python script]() was designed to search for regions with cross-junction reads. 
 2. The outcome of this script will generate a list of genomic bin pairs, which represent two far apart genomic locations that have reads mapped simultaneously on them. It follows by the number of cross-junction reads in each examine sample.   
 2. To avoid false positive, we need to remove the noises by setting two thresholds. 
 3. First threshold: The novel junctions are unique to specific sample, so other peer samples and controls should have 0 cross-junction reads. 
