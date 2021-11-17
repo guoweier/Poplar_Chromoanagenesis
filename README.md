@@ -69,7 +69,7 @@ There are 4 parts for this pipeline.
       a. The contig mapped onto predicted regions on the reference genome
       b. The contig did not map to other genomic positions multiple times (>=4)
 4.1 Before running this bash script, make sure the custom database has been indexed. For database that have been indexed, it should contain several files with the names ended in: .nhr, .nin, .nog, .nsd, .nsi, .nsq<br>
-If not, should make the indexes for database at first. For more details, please look at the [makeblastdb](https://www.ncbi.nlm.nih.gov/books/NBK569841/). <br>
+If not, should make the indexes for database at first. For more details, please look at [makeblastdb](https://www.ncbi.nlm.nih.gov/books/NBK569841/). <br>
    - The fundamental customized database build command example:<br>
       ```
       makeblastdb -in Athaliana_167_TAIR10.fa -input_type fasta -dbtype nucl -parse_seqids -out Athaliana_167_TAIR10.fa
