@@ -68,6 +68,17 @@ There are 4 parts for this pipeline.
    - The criteria for selecting valid junctions:<br>
       a. The contig mapped onto predicted regions on the reference genome
       b. The contig did not map to other genomic positions multiple times (>=4)
+4.1 Before running this bash script, make sure the custom database has been indexed. For database that have been indexed, it should contain several files with the names ended in: .nhr, .nin, .nog, .nsd, .nsi, .nsq<br>
+If not, should make the indexes for database at first. For more details, please look at the [makeblastdb](https://www.ncbi.nlm.nih.gov/books/NBK569841/). <br>
+   - The fundamental customized database build command example:<br>
+      ```
+      makeblastdb -in Athaliana_167_TAIR10.fa -input_type fasta -dbtype nucl -parse_seqids -out Athaliana_167_TAIR10.fa
+      ```
+   - -in: input fasta file
+   - -input_type: input file type
+   - -dbtype: database type (here is nucleotide)
+   - -parse_seqids (I just copied down, needs to find out what it means later)
+   - -out: output file
 
 ### Results
 This pipeline predicts the genomic positions of novel DNA junctions by using Illumina short-read sequencing. It finally gives out potential junction sequence, the two genomic mapping positions, as well as other information such as junction orientation. <br>
