@@ -1,5 +1,5 @@
 # Poplar Chromoanagenesis
-A pipeline for locating the genomic position of chromosomal rearrangement junctions by using Illumina genome sequencing. 
+A workflow for locating the genomic position of chromosomal rearrangement junctions by using Illumina genome sequencing. 
 
 ### Introduction
 Genomic structural variation is widely reported in different species. Extreme scenario such as chromoanagenesis, which is the fragmentation and reorganization of one chromosome in early mitosis, has been detected under various situation. It has shown to correlate with human cancer, but also have been found in plants. <br>
@@ -16,7 +16,7 @@ It is able to find out:
 3. The overlaps or unknown insertions between two joined fragment ends. 
 
 ### Working Process
-There are 4 parts for this pipeline. 
+There are 4 parts for this workflow. 
 
 #### Part 1. Record dosage Variation boundaries.
 1. Input file is the outcome of [Bin-By-Sam.py](https://github.com/Comai-Lab/bin-by-sam) from Comai Lab. Check the link for more inforamtion. 
@@ -81,6 +81,6 @@ If not, should make the indexes for database at first. For more details, please 
    - -out: output file
 
 ### Results
-This pipeline predicts the genomic positions of novel DNA junctions by using Illumina short-read sequencing. It finally gives out potential junction sequence, the two genomic mapping positions, as well as other information such as junction orientation. <br>
+This workflow predicts the genomic positions of novel DNA junctions by using Illumina short-read sequencing. It finally gives out potential junction sequence, the two genomic mapping positions, as well as other information such as junction orientation. <br>
 With these results, we can predict how genome being rearranged during early development. Structural variation such as transloction, inversion, or even extreme scenario such as chromoanagenesis can be characterized by this approach. <br>
 
